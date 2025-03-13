@@ -40,7 +40,7 @@ export async function POST(request: Request) {
       const words = text.split(/\s+/)
 
       // Process each word
-      const segmentedWords = words.map((word) => {
+      const segmentedWords = words.map((word:string) => {
         // If the word is in the none-words list, don't segment it
         if (noneWords.includes(word)) {
           return word
